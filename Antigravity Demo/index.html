@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mehandhi Artist | Bringing Art to Your Hands</title>
+    <meta name="description"
+        content="Professional Mehandhi artist offering bridal, party, and festival henna designs. Book your appointment today!">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // 🔴 replace this
+        })();
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">[Bhuvana] Mehandhi</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bringing Art to Your Hands</h1>
+            <p>Exquisite, custom henna designs for your special moments.</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+    </section>
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <h2 class="section-title">About the Artist</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I am a Bhuvana Mehandhi artist with years of experience in creating intricate, beautiful
+                        henna designs. My passion is to bring traditional art to modern celebrations.</p>
+                    <p>Specializing in Bridal Mehandhi, Arabic patterns, and custom designs, I use only natural,
+                        high-quality henna to ensure a rich, dark stain that lasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-ring service-icon"></i>
+                    <h3>Bridal Mehandhi</h3>
+                    <p>Elaborate, traditional designs for full hands and legs.</p>
+                    <span class="price">Contact for price</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gem service-icon"></i>
+                    <h3>Party Mehandhi</h3>
+                    <p>Elegant and quick designs for guests and parties.</p>
+                    <span class="price">Contact for price</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-star service-icon"></i>
+                    <h3>Festival Mehandhi</h3>
+                    <p>Special designs for Karwa Chauth, Eid, Diwali, etc.</p>
+                    <span class="price">Contact for price</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette service-icon"></i>
+                    <h3>Custom Designs</h3>
+                    <p>Personalized modern or traditional henna art.</p>
+                    <span class="price">Contact for price</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img
+                        src="https://via.placeholder.com/800x600/800000/D4AF37?text=Bridal+Mehandhi"
+                        alt="Mehandhi Design 1" class="zoomable"></div>
+                <div class="gallery-item"><img
+                        src="https://via.placeholder.com/800x600/D4AF37/800000?text=Arabic+Mehandhi"
+                        alt="Mehandhi Design 2" class="zoomable"></div>
+                <div class="gallery-item"><img
+                        src="https://via.placeholder.com/800x600/800000/D4AF37?text=Festival+Mehandhi"
+                        alt="Mehandhi Design 3" class="zoomable"></div>
+                <div class="gallery-item"><img
+                        src="https://via.placeholder.com/800x600/D4AF37/800000?text=Custom+Design"
+                        alt="Mehandhi Design 4" class="zoomable"></div>
+            </div>
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </section>
+    <section id="booking" class="booking section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Book an Appointment</h2>
+            <div class="booking-container">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="eventType" name="eventType" required>
+                            <option value="">Select Event Type</option>
+                            <option value="bridal">Bridal</option>
+                            <option value="party">Party / Guest</option>
+                            <option value="festival">Festival</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="datetime-local" id="datetime" name="datetime" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Any special requests or details?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title">Client Reviews</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="review">"Absolutely stunning bridal mehandhi! The stain was so dark and the detailing was
+                        perfect. Highly recommended!"</p>
+                    <h4 class="client-name">- Priya S.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p class="review">"Very professional and quick. Had her do mehandhi for my Diwali party and everyone
+                        loved her designs."</p>
+                    <h4 class="client-name">- Anjali M.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +91 8940319861</p>
+                    <p><i class="fas fa-envelope"></i>mr.blackvision03@gmail.com </p>
+                    <p><i class="fas fa-map-marker-alt"></i> Your City, Style Studio</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Bhuvana Mehandhi Artist. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/918940319861" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="frontend.js"></script>
+</body>
+
+</html>
